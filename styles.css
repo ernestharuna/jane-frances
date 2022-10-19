@@ -1,3 +1,7 @@
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    background: rgb(21, 21, 21);
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,6 +43,14 @@ nav a {
    font-size: 11px;
 }
 
+i {
+   display: inline-block;
+   margin-right: 20px;
+   color: beige;
+   font-size: 19px;
+   text-decoration: none;
+}
+
 span.menu {
    display: none;
 }
@@ -75,81 +87,8 @@ section {
 
 /* Project cards */
 
-.project-container {
-   position: relative;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   flex-wrap: wrap;
-   z-index: 1;
-}
-
-.project-container .card {
-   position: relative;
-   width: 250px;
-   height: 350px;
-   margin: 20px 20px 20px 0;
-   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-   border-radius: 15px;
-   /* background: rgba(255, 255, 255, 0.1); */
-   background-color: black;
-   overflow: hidden;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-top: 1px solid rgba(255, 255, 255, 0.5);
-   border-left: 1px solid rgba(255, 255, 255, 0.5);
-   backdrop-filter: blur(5px);
-}
-
-.project-container .card .content {
-   padding: 20px;
-   text-align: center;
-}
-
-.project-container .card .content h2 {
-   position: absolute;
-   top: -40px;
-   left: 10px;
-   font-size: 4rem;
-   font-weight: 900;
-   color: rgba(255, 255, 255, 0.05);
-   pointer-events: none;
-}
-
-.project-container .card .content h3 {
-   font-size: 1.8rem;
-   color: #fff;
-   z-index: 1;
-   text-align: center;
-}
-
-.project-container .card .content p {
-   font-size: 1em;
-   color: #fff;
-   font-weight: 300;
-}
-
-.project-container .card .content a {
-   position: relative;
-   display: inline-block;
-   padding: 8px 20px;
-   margin-top: 15px;
-   color: #fff;
-   border-radius: 20px;
-   text-decoration: underline;
-   text-decoration-color: aqua;
-   text-decoration-thickness: 5px;
-   font-weight: 500;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
 #my-photo{
    float: left;
-}
-
-section#my-tools, #connect{
-   text-align: center;
 }
 
 footer{
@@ -163,11 +102,37 @@ footer{
 
 
 @media screen and (max-width: 760px) {
+   header {
+      margin: 0 20px;
+      padding: 15px 20px;
+      position: sticky;
+      top: 20px;
+   }
+   
+   #intro h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: rgb(176, 107, 240);
+   }
+
+   h3.topic {
+      text-align: center;
+      font-size: 2rem;
+   }
+
+   section {
+      margin: 10px 25px;
+      padding: 15px 5px;
+      text-align: center;
+   }
 
    nav {
       display: none;
    }
+
    span.menu {
-      display: inline-block;
+      display: block;
+      cursor: pointer;
+      font-size: 20px;
    }
 }
