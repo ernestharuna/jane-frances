@@ -30,25 +30,33 @@ h1 {
    margin: 0;
 }
 
+#intro h2 {
+   font-size: 4rem;
+   font-weight: 900;
+   color: rgb(176, 107, 240);
+}
+
 h3.topic {
    font-size: 3rem;
+}
+
+a {
+   display: inline-block;
+   color: #fff;
+   text-decoration: none;
 }
 
 nav a {
    display: inline-block;
    margin-right: 20px;
-   text-decoration: none;
-   color: beige;
    text-transform: uppercase;
    font-size: 11px;
 }
 
-i {
+i.bi {
    display: inline-block;
    margin-right: 20px;
-   color: beige;
    font-size: 19px;
-   text-decoration: none;
 }
 
 span.menu {
@@ -59,12 +67,6 @@ section {
    padding: 15px 40px;
    margin: 25px 50px;
    color: white;
-}
-
-#intro h2 {
-   font-size: 5rem;
-   font-weight: 900;
-   color: rgb(176, 107, 240);
 }
 
 .btn-1 {
@@ -88,7 +90,16 @@ section {
 /* Project cards */
 
 #my-photo{
-   float: left;
+   display: inline-block;
+   width: 300px;
+   height: auto;
+   margin-right: 10px;
+   border-radius: 8px;
+}
+#about-me .about-box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
 footer{
@@ -97,6 +108,13 @@ footer{
    align-items: center;
    padding: 15px 40px;
    color: #fff;
+}
+
+.to-top {
+   padding: 2px 10px;
+   border-radius: 80%;
+   color: #fff;
+   border: 1px solid #fff;
 }
 
 
@@ -128,6 +146,12 @@ footer{
 
    nav {
       display: none;
+   }
+
+   #my-photo{
+      float: none;
+      width: 300px;
+      height: auto;
    }
 
    span.menu {
