@@ -122,11 +122,13 @@ footer{
 }
 
 .to-top {
-   padding: 5px 8px;
-   border-radius: 80%;
+   padding: 9px 16px;
+   border-radius: 100%;
    color: #fff;
    font-size: 18px;
    border: 1px solid #fff;
+   animation: hovering 5s ease infinite;
+   position: relative;
 }
 
 
@@ -170,5 +172,19 @@ footer{
       display: block;
       cursor: pointer;
       font-size: 20px;
+   }
+}
+
+@keyframes hovering {
+   0% {
+      top: 0px;
+   }
+
+   50% {
+      top: -15px;
+   }
+
+   100% {
+      top: 0px;
    }
 }
