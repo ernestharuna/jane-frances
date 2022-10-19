@@ -59,8 +59,18 @@ i.bi {
    font-size: 19px;
 }
 
-span.menu {
+span.menu,
+.lower-nav {
    display: none;
+}
+
+.mobile-nav {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100vw;
+   height: fit-content;
+   z-index: 3;
 }
 
 section {
@@ -78,6 +88,7 @@ section {
    border: none;
    transition: .3s ease;
 }
+
 .btn-1:hover {
    background: rgb(82, 0, 82);
 }
@@ -91,29 +102,28 @@ section {
    border: 1px solid white;
    transition: .3s ease;
 }
+
 .btn-2:hover {
    box-shadow: 0 0 5px 1px purple;
    transition: .3s ease;
    border: 1px solid purple;
 }
 
-
-/* Project cards */
-
-#my-photo{
+#my-photo {
    display: inline-block;
    width: 300px;
    height: auto;
    margin-right: 10px;
    border-radius: 8px;
 }
+
 #about-me .about-box {
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
 
-footer{
+footer {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -140,7 +150,7 @@ footer{
       position: sticky;
       top: 20px;
    }
-   
+
    #intro h2 {
       font-size: 3rem;
       font-weight: 900;
@@ -162,7 +172,7 @@ footer{
       display: none;
    }
 
-   #my-photo{
+   #my-photo {
       float: none;
       width: 300px;
       height: auto;
@@ -172,6 +182,27 @@ footer{
       display: block;
       cursor: pointer;
       font-size: 20px;
+   }
+
+   .lower-nav {
+      position: relative;
+      display: inline-block;
+      padding: 20px;
+      width: 98%;
+      margin: 0 auto;
+      background: black;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      transition: .5s ease;
+   }
+
+   .lower-nav .item {
+      display: block;
+      text-transform: uppercase;
+      font-size: 11px;
+      transition: 0.3s;
+      cursor: pointer;
    }
 }
 
