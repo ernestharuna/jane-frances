@@ -49,10 +49,6 @@ a {
    text-decoration: none;
    transition: .3s ease;
 }
-a:visited {
-   display: inline-block;
-   text-decoration: none;
-}
 
 nav a {
    display: inline-block;
@@ -73,22 +69,13 @@ nav a {
 i.bi {
    display: inline-block;
    margin-left: 20px;
-   font-size: 13px;
+   font-size: 18px;
    transition: .3s ease;
 }
 
 span.menu,
-.lower-nav {
+.side-nav {
    display: none;
-}
-
-.mobile-nav {
-   position: fixed;
-   bottom: 0;
-   left: 0;
-   width: 100vw;
-   height: fit-content;
-   z-index: 3;
 }
 
 section {
@@ -102,6 +89,7 @@ button {
    font-size: 16px;
    transition: .2s ease-in-out;
 }
+
 .btn-1 {
    background: purple;
    padding: 18px 36px;
@@ -138,11 +126,12 @@ button {
    box-shadow: 0 0 0 2px aqua;
 }
 
-#my-tools div{
+#my-tools div {
    display: flex;
    justify-content: start;
    align-items: center;
 }
+
 .tool-img {
    display: block;
    width: 40px;
@@ -168,18 +157,34 @@ footer {
    font-weight: 900;
 }
 
-hr{
-   height: 1px;
-   background-color: purple;
-   border: 1px solid purple;
+hr {
+   height: 2px;
+   background: linear-gradient(45deg, purple, aqua);
+   background-size: 200% 200%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   animation: gradient 5s ease infinite;
+   border: none
 }
+
 .to-top {
-   border-radius: 100%;
-   color: #fff;
-   font-size: 18px;
-   border: 1px solid #fff;
-   animation: hovering 5s ease infinite;
-   position: relative;
+   position: fixed;
+   bottom: -2px;
+   right: 50%;
+   transform: translateX(50%);
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 40px 40px 0 0;
+   backdrop-filter: blur(5px);
+   border: 1px solid black;
+   padding: 10px;
+   z-index: 3;
+   cursor: pointer;
+   transition: .3s ease;
+   /* animation: hovering 5s ease infinite; */
+}
+
+.hidden {
+   bottom: -35px;
 }
 
 @media screen and (max-width: 760px) {
@@ -190,6 +195,9 @@ hr{
       top: 20px;
    }
 
+   h1{
+      font-size: 13px;
+   }
    #intro h2 {
       font-size: 3rem;
       font-weight: 900;
@@ -223,31 +231,38 @@ hr{
       font-size: 20px;
    }
 
-   .lower-nav {
-      position: relative;
+   .side-nav {
+      height: 400px;
+      width: 25px;
+      position: fixed;
+      z-index: 2;
       left: -900px;
-      display: inline-block;
-      padding: 20px;
-      width: 98%;
-      margin: 0 auto;
-      background: black;
-      color: #fff;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(9px);
+      border-top: 1px solid purple;
+      border-right: 1px solid purple;
+      border-radius: 0 20px 0 0;
       display: flex;
-      justify-content: space-around;
-      transition: .9s ease;
+      flex-wrap: wrap;
+      justify-content: center;
+      transition: 0.5s;
+      padding: 20px;
    }
 
-   #my-tools div{
+   .side-nav .item {
+      display: block;
+      margin: 1px auto;
+      font-size: 30px;
+      transition: 0.3s;
+      cursor: pointer;
+      color: white;
+   }
+
+   #my-tools div {
       display: flex;
       justify-content: center;
       align-items: center;
-   }
-   .lower-nav .item {
-      display: block;
-      text-transform: uppercase;
-      font-size: 11px;
-      transition: 0.3s;
-      cursor: pointer;
    }
 
    footer {
@@ -268,5 +283,19 @@ hr{
 
    100% {
       top: 0px;
+   }
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+
+   50% {
+      background-position: 100% 50%;
+   }
+
+   100% {
+      background-position: 0% 50%;
    }
 }
