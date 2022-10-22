@@ -28,6 +28,7 @@ h1 {
    font-size: 18px;
    padding: 0;
    margin: 0;
+   font-variant: small-caps;
 }
 
 #intro h2 {
@@ -44,6 +45,11 @@ a {
    display: inline-block;
    color: #fff;
    text-decoration: none;
+   transition: .3s ease;
+}
+a:visited {
+   display: inline-block;
+   text-decoration: none;
 }
 
 nav a {
@@ -51,12 +57,22 @@ nav a {
    margin-right: 20px;
    text-transform: uppercase;
    font-size: 11px;
+   transition: .3s ease;
+}
+
+:where(i, a):hover {
+   cursor: pointer;
+   transition: .3s ease;
+   transform: scale(1.1, 1.1);
+   color: aqua;
+   font-weight: 900;
 }
 
 i.bi {
    display: inline-block;
-   margin-right: 20px;
-   font-size: 19px;
+   margin-left: 20px;
+   font-size: 13px;
+   transition: .3s ease;
 }
 
 span.menu,
@@ -79,6 +95,11 @@ section {
    color: white;
 }
 
+button {
+   font-weight: 700;
+   font-size: 16px;
+   transition: .2s ease-in-out;
+}
 .btn-1 {
    background: purple;
    padding: 18px 36px;
@@ -86,7 +107,6 @@ section {
    border-radius: 9px;
    color: white;
    border: none;
-   transition: .3s ease;
 }
 
 .btn-1:hover {
@@ -100,12 +120,10 @@ section {
    margin: 10px 10px 10px 0;
    border-radius: 9px;
    border: 1px solid white;
-   transition: .3s ease;
 }
 
 .btn-2:hover {
    box-shadow: 0 0 5px 1px purple;
-   transition: .3s ease;
    border: 1px solid purple;
 }
 
@@ -115,6 +133,7 @@ section {
    height: auto;
    margin-right: 10px;
    border-radius: 8px;
+   box-shadow: 0 0 0 2px aqua;
 }
 
 #about-me .about-box {
@@ -127,12 +146,14 @@ footer {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   font-size: 11px;
    padding: 15px 40px;
+   margin: 0 50px;
    color: #fff;
+   font-weight: 900;
 }
 
 .to-top {
-   padding: 9px 16px;
    border-radius: 100%;
    color: #fff;
    font-size: 18px;
@@ -140,8 +161,6 @@ footer {
    animation: hovering 5s ease infinite;
    position: relative;
 }
-
-
 
 @media screen and (max-width: 760px) {
    header {
@@ -186,6 +205,7 @@ footer {
 
    .lower-nav {
       position: relative;
+      left: -900px;
       display: inline-block;
       padding: 20px;
       width: 98%;
@@ -194,7 +214,7 @@ footer {
       color: #fff;
       display: flex;
       justify-content: space-around;
-      transition: .5s ease;
+      transition: .9s ease;
    }
 
    .lower-nav .item {
@@ -203,6 +223,12 @@ footer {
       font-size: 11px;
       transition: 0.3s;
       cursor: pointer;
+   }
+
+   footer {
+      margin: 10px 25px;
+      padding: 15px 5px;
+      color: #fff;
    }
 }
 
