@@ -138,6 +138,19 @@ button {
    box-shadow: 0 0 0 2px aqua;
 }
 
+#my-tools div{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+.tool-img {
+   display: block;
+   width: 40px;
+   height: auto;
+   margin-right: 20px;
+   border-radius: 8px;
+}
+
 #about-me .about-box {
    display: flex;
    justify-content: space-between;
@@ -224,6 +237,11 @@ hr{
       transition: .9s ease;
    }
 
+   #my-tools div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
    .lower-nav .item {
       display: block;
       text-transform: uppercase;
